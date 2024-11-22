@@ -1,24 +1,25 @@
-.navbar{
+.navbar {
     height: 12vh;
-    background-color: #504aec;
+    background-color: #ffffff; /* White background */
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
 
-.navbar h3{
-
+.navbar h3 {
     margin: 0;
-    color: aliceblue;
+    color: #000000; /* Black text */
     margin-left: 3vw;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.nav-content{
-
+.nav-content {
     display: flex;
     width: 70%;
     align-items: center;
@@ -26,113 +27,89 @@
     gap: 20px;
 }
 
-.nav-search{
-
+.nav-search {
     width: 70%;
     display: flex;
     align-items: center;
 }
 
-.nav-search input{
+.nav-search input {
     width: 100%;
     outline: none;
-    padding: 10px 10px;
+    padding: 10px 15px;
     border-radius: 0.5rem;
-    border: none;
+    border: 1px solid #cccccc;
     font-size: 0.9rem;
-    position: relative;
-    left: 2rem;
+    color: #333333;
+    background-color: #f9f9f9; /* Light background for the input */
 }
-.nav-search input:focus{
+
+.nav-search input:focus {
+    border-color: #888888;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none;
 }
 
-.nav-search-icon{
-    font-size: 2rem; 
+.nav-search-icon {
+    font-size: 1.5rem;
     position: relative;
-    left: -0.5rem; 
+    left: -2.5rem;
     cursor: pointer;
+    color: #555555; /* Neutral grey for the icon */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.search-result-data{
-
-    position: absolute;
-    top: 10vh;
-    left: 40vw;
-    background-color: rgba(233, 240, 240, 0.799);
-    backdrop-filter: blur(15px);
-    padding: 20px;
-    border-radius: 0.4rem;
-    color: rgb(33, 56, 96);
+.nav-search-icon:hover {
+    color: #000000; /* Black on hover */
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
-.search-result-data-close-btn{
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.nav-content button{
-
-    margin: 0 30px 0 0;
-    padding: 0;
-    border: 1px solid aliceblue;
-    color: aliceblue;
-    padding: 3px 20px 5px 20px;
+.nav-content button {
+    padding: 5px 20px;
+    border: 1px solid #000000; /* Black border */
+    color: #000000; /* Black text */
+    background-color: transparent; /* Transparent button */
     border-radius: 0.5rem;
     font-weight: 600;
-}
-.nav-content button:hover{
-
-    border: 1px solid rgba(240, 248, 255, 0.317);
-    color: rgb(255, 255, 255);
-    background-color: rgba(240, 248, 255, 0.317);
-
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.nav-content-icons{
+.nav-content button:hover {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+.nav-content-icons {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* width: ; */
     gap: 20px;
     margin-right: 30px;
 }
 
-.nav-cart{
-display: flex;
-
-}
-
-.nav-cart .cart-count{
-    position: relative;
-    top: -10px;
-    /* color: aliceblue; */
-    font-size: 0.7rem;
-    color: rgb(254, 218, 255);
-}
-
-.nav-profile{
-    display: flex;
-    gap: 5px;
-    cursor: pointer;
-}
-.nav-profile p{
-    margin: 0;
-    color: aliceblue;
-}
-
-.navbar-icons{
-
+.navbar-icons {
     font-size: 1.5rem;
-    color: rgb(222, 228, 233);
+    color: #555555; /* Neutral grey */
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-/* admin navbar */
+.navbar-icons:hover {
+    color: #000000; /* Black on hover */
+}
 
-.navbar-admin{
+.nav-profile p {
+    margin: 0;
+    color: #000000; /* Black text for profile name */
+    font-weight: bold;
+}
+
+/* Admin Navbar */
+
+.navbar-admin {
     height: 12vh;
-    background-color: #0e1420;
+    background: #212529; /* Neutral dark theme */
     display: flex;
     align-items: center;
     position: fixed;
@@ -140,30 +117,35 @@ display: flex;
     top: 0;
     width: 100%;
     z-index: 999;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-.navbar-admin h3{
-
+.navbar-admin h3 {
     margin: 0;
-    color: rgba(240, 248, 255, 0.701);
+    color: #f8f9fa;
     margin-left: 3vw;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
-.navbar-admin ul{
+.navbar-admin ul {
     display: flex;
     margin: 0;
     gap: 25px;
     margin-right: 3vw;
 }
 
-.navbar-admin ul li{
+.navbar-admin ul li {
     list-style: none;
-    color: rgba(240, 248, 255, 0.701);
+    color: #ced4da;
     cursor: pointer;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-admin ul li:hover{
-    
-    color: rgb(235, 240, 245);
+.navbar-admin ul li:hover {
+    color: #e9ecef;
+    transform: scale(1.1);
 }

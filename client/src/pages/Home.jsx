@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Home.css'
-import HomeBanner from '../images/home-banner-2.png'
+import HomeBanner from '../images/home-banner1.png'
 import Products from '../components/Products'
 import Footer from '../components/Footer'
 import FlashSale from '../components/FlashSale'
@@ -28,10 +28,11 @@ const Home = () => {
   return (
     <div className="HomePage">
       <div className="home-banner">
-        {bannerImg ?
-          <img src={bannerImg} alt="" />
-        :
-        ""}
+      {bannerImg ? (
+          <img src={bannerImg} alt="Home Banner" className="banner-image" />
+        ) : (
+          <img src={HomeBanner} alt="Default Home Banner" className="banner-image" />
+        )}
       </div>
 
       <div className="home-categories-container">
@@ -58,7 +59,7 @@ const Home = () => {
 
         <div className="home-category-card" onClick={()=>navigate('/category/Sports-Equipment')}>
           <img src="https://a.storyblok.com/f/112937/568x464/82f66c3a21/all_the_english-_football_terms_you_need_to_know_blog-hero-low.jpg/m/620x0/filters:quality(70)/" alt="" />
-          <h5>Sports Equipments</h5>
+          <h5>Sports</h5>
         </div>
 
       </div>
