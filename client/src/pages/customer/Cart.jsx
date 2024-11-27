@@ -68,7 +68,7 @@ const Cart = () => {
     const discount = cartItems.reduce((sum, product)=> sum + ((product.price * product.discount)/100 )* product.quantity, 0);
     setTotalPrice(totalPrice);
     setTotalDiscount(Math.floor(discount));
-    if(totalPrice > 0 || cartItems.length === 0){
+    if(totalPrice > 0 ){
       setDeliveryCharges(0);
     } else{ 
       setDeliveryCharges(50);
